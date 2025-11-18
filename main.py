@@ -1,8 +1,6 @@
 import sys
 from stats import get_num_words, get_count_char, get_sorted_char_list
 
-# ---
-
 def get_book_text(filepath):
     with open(filepath) as file:
         return file.read()
@@ -23,7 +21,6 @@ def main(book_path):
     for item in sorted_chars:
         print(f"{item['char']}: {item['num']}")
 
-# arg checking
 if len(sys.argv) != 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
